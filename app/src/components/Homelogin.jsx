@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import '../style.css';
+import styles from '../style.module.css';
 
 export default function HomeLogin() {
   const navigate = useNavigate();
@@ -26,14 +26,14 @@ export default function HomeLogin() {
   };
 
   return (
-    <>
+    <div className={styles.container}>
       {/* NAVBAR */}
-      <nav className="navbar">
-        <div className="logo">TU Market Place</div>
-        <div className="nav-actions">
-          <div className="profile-wrapper" ref={dropdownRef}>
+      <nav className={styles.navbar}>
+        <div className={styles.logo}>TU Market Place</div>
+        <div className={styles.navActions}>
+          <div className={styles.profileWrapper} ref={dropdownRef}>
             <div
-              className="profile-icon"
+              className={styles.profileIcon}
               onClick={(e) => {
                 e.stopPropagation();
                 setDropdownOpen(!dropdownOpen);
@@ -44,12 +44,15 @@ export default function HomeLogin() {
               </svg>
             </div>
 
+            {/* สำหรับคลาสที่มีเงื่อนไข ผมใช้ Template Literal ครอบครับ */}
             <div
-              className={`dropdown ${dropdownOpen ? 'open' : ''}`}
+              className={`${styles.dropdown} ${dropdownOpen ? styles.open : ''}`}
               onClick={(e) => e.stopPropagation()}
             >
-              <div className="dropdown-item logout" onClick={handleLogout}>
-                <svg viewBox="0 0 24 24"><path d="M17 7l-1.41 1.41L18.17 11H8v2h10.17l-2.58 2.58L17 17l5-5-5-5zM4 5h8V3H4c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h8v-2H4V5z"/></svg>
+              <div className={`${styles.dropdownItem} ${styles.logout}`} onClick={handleLogout}>
+                <svg viewBox="0 0 24 24">
+                  <path d="M17 7l-1.41 1.41L18.17 11H8v2h10.17l-2.58 2.58L17 17l5-5-5-5zM4 5h8V3H4c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h8v-2H4V5z"/>
+                </svg>
                 ออกจากระบบ
               </div>
             </div>
@@ -58,16 +61,16 @@ export default function HomeLogin() {
       </nav>
 
       {/* HERO */}
-      <section className="hero">
-        <h1 className="hero-title">
+      <section className={styles.hero}>
+        <h1 className={styles.heroTitle}>
           ตลาดขายของมือสอง<br />
-          สำหรับ<span className="white">นักศึกษา</span>
+          สำหรับ<span className={styles.white}>นักศึกษา</span>
         </h1>
-        <div className="hero-actions">
-          <button className="btn-hero-gold"    onClick={() => navigate('/products')}>เลือกซื้อสินค้า</button>
-          <button className="btn-hero-outline" onClick={() => navigate('/sell')}>ลงขายสินค้า</button>
+        <div className={styles.heroActions}>
+          <button className={styles.btnHeroGold}    onClick={() => navigate('/products')}>เลือกซื้อสินค้า</button>
+          <button className={styles.btnHeroOutline} onClick={() => navigate('/sell')}>ลงขายสินค้า</button>
         </div>
       </section>
-    </>
+    </div>
   );
 }

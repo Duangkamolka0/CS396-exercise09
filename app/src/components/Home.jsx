@@ -1,7 +1,8 @@
 import { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import '../style.css';
+import styles from '../style.module.css';
 
+// ฟังก์ชันแสดง Toast แจ้งเตือน
 function showToast(message) {
   const existing = document.getElementById('toast');
   if (existing) existing.remove();
@@ -43,27 +44,27 @@ export default function Home() {
   };
 
   return (
-    <>
+    <div className={styles.container}>
       {/* NAVBAR */}
-      <nav className="navbar">
-        <div className="logo">TU Market Place</div>
-        <div className="nav-actions">
-          <button className="btn-outline" onClick={goToLogin}>เข้าสู่ระบบ</button>
-          <button className="btn-gold"    onClick={goToRegister}>สมัครสมาชิก</button>
+      <nav className={styles.navbar}>
+        <div className={styles.logo}>TU Market Place</div>
+        <div className={styles.navActions}>
+          <button className={styles.btnOutline} onClick={goToLogin}>เข้าสู่ระบบ</button>
+          <button className={styles.btnGold}    onClick={goToRegister}>สมัครสมาชิก</button>
         </div>
       </nav>
 
       {/* HERO */}
-      <section className="hero">
-        <h1 className="hero-title">
+      <section className={styles.hero}>
+        <h1 className={styles.heroTitle}>
           ตลาดขายของมือสอง<br />
-          สำหรับ<span className="white">นักศึกษา</span>
+          สำหรับ<span className={styles.white}>นักศึกษา</span>
         </h1>
-        <div className="hero-actions">
-          <button className="btn-hero-gold"    onClick={handleShop}>เลือกซื้อสินค้า</button>
-          <button className="btn-hero-outline" onClick={handleSell}>ลงขายสินค้า</button>
+        <div className={styles.heroActions}>
+          <button className={styles.btnHeroGold}    onClick={handleShop}>เลือกซื้อสินค้า</button>
+          <button className={styles.btnHeroOutline} onClick={handleSell}>ลงขายสินค้า</button>
         </div>
       </section>
-    </>
+    </div>
   );
 }

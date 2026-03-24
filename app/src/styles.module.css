@@ -1,3 +1,9 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 body {
   margin: 0;
   font-family: "Segoe UI", sans-serif;
@@ -106,7 +112,6 @@ input:focus {
 .header {
   width: 100%;
   padding: 1rem 5%;
-  box-sizing: border-box;
   background: #22180A;
   border-bottom: 10px solid #C8892B;
   display: flex;
@@ -114,27 +119,27 @@ input:focus {
   align-items: center;
 }
 
-.header-left h1 {
+.headerLeft h1 {
   color: white;
   margin: 0;
   font-size: 26px;
   font-family: 'Jaro', sans-serif;
 }
 
-.header-right {
+.headerRight {
   display: flex;
   align-items: center;
   margin-right: 8%;
 }
 
-#home {
-  color: white;
+.homeLink {
+  color: white !important;
   font-size: 16px;
   cursor: pointer;
   margin: 0;
 }
 
-#home:hover {
+.homeLink:hover {
   background: #3f3f3f;
 }
 
@@ -142,15 +147,16 @@ input:focus {
   margin-top: 40px;
 }
 
-.register-form {
+.registerForm {
   margin-left: 120px;
 }
 
-.register-form h2 {
+.registerForm h2 {
   margin-left: 0;
+  margin-top: 40px;
 }
 
-.register-form input {
+.registerForm input {
   align-items: center;
   width: 100%;
   padding: 14px;
@@ -159,28 +165,38 @@ input:focus {
   max-width: 500px;
 }
 
-.register-form .form-group {
+.registerForm .form-group {
   display: flex;
   flex-direction: column;
   width: 100%;
 }
 
-.register-form .form-group label {
+.registerForm .form-group label {
   margin-bottom: 5px;
   font-weight: 600;
 }
 
-.register-form .form-group input {
+.registerForm .form-group input {
   width: 100%;
 }
 
-.register-form label {
+input {
+  width: 100%;
+  padding: 14px;
+  border: 2px solid #d6a04d;
+  border-radius: 10px;
+  font-size: 14px;
+  outline: none;
+  transition: 0.2s;
+}
+
+.registerForm label {
   display: block;
   margin-bottom: 6px;
   font-weight: 600;
 }
 
-.register-form .next-btn {
+.registerForm .nextBtn {
   padding: 14px;
   background: #c98b2a;
   color: white;
@@ -193,11 +209,11 @@ input:focus {
   width: 150px;
 }
 
-.register-form .next-btn:hover {
+.registerForm .nextBtn:hover {
   background: #b97d2c;
 }
 
-.register-form .button-row {
+.registerForm .button-row {
   display: flex;
   margin-left: 1100px;
   margin-top: 60px;

@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { showToast } from '../utils';
 import parcelIcon from '../assets/logos_parcel-icon.png';
-import '../login.css';
+import styles from '../login.module.css';
 
 export default function Login() {
   const navigate = useNavigate();
@@ -32,26 +32,26 @@ export default function Login() {
   };
 
   return (
-    <>
+    <div className={styles.container}>
       {/* NAVBAR */}
-      <nav className="navbar">
-        <div className="logo">TU Market Place</div>
+      <nav className={styles.navbar}>
+        <div className={styles.logo}>TU Market Place</div>
       </nav>
 
       {/* LOGIN CARD */}
-      <main className="login-page">
-        <div className="login-card">
+      <main className={styles.loginPage}>
+        <div className={styles.loginCard}>
 
           {/* Left: Illustration */}
-          <div className="login-illustration">
-          <img src={parcelIcon} alt="box" className="box-img" />
+          <div className={styles.loginIllustration}>
+            <img src={parcelIcon} alt="box" className={styles.boxImg} />
           </div>
 
           {/* Right: Form */}
-          <div className="login-form-side">
-            <h2 className="login-title">เข้าสู่ระบบ</h2>
+          <div className={styles.loginFormSide}>
+            <h2 className={styles.loginTitle}>เข้าสู่ระบบ</h2>
 
-            <div className="form-group">
+            <div className={styles.formGroup}>
               <label>ชื่อผู้ใช้งาน / อีเมล</label>
               <input
                 type="text"
@@ -62,7 +62,7 @@ export default function Login() {
               />
             </div>
 
-            <div className="form-group">
+            <div className={styles.formGroup}>
               <label>รหัสผ่าน</label>
               <input
                 type="password"
@@ -73,13 +73,13 @@ export default function Login() {
               />
             </div>
 
-            <button className="btn-login" onClick={handleLogin}>
+            <button className={styles.btnLogin} onClick={handleLogin}>
               เข้าสู่ระบบ
             </button>
           </div>
 
         </div>
       </main>
-    </>
+    </div>
   );
 }

@@ -37,14 +37,14 @@
       text-transform: uppercase;
     }
 
-    .nav-actions {
+    .navActions {
       display: flex;
       gap: 14px;
       align-items: center;
     }
 
-    .btn-outline {
-      background: transparent;
+    .btnOutline {
+      background: var(--bg-dark) !important;
       border: 2px solid var(--text-light);
       color: var(--text-light);
       padding: 10px 32px;
@@ -55,11 +55,11 @@
       cursor: pointer;
       transition: background 0.2s;
     }
-    .btn-outline:hover {
+    .btnOutline:hover {
       background: rgba(255, 255, 255, 0.08);
     }
 
-    .btn-gold {
+    .btnGold {
       background: var(--gold);
       border: 2px solid var(--gold);
       color: #fff;
@@ -71,7 +71,7 @@
       cursor: pointer;
       transition: background 0.2s;
     }
-    .btn-gold:hover {
+    .btnGold:hover {
       background: var(--gold);
       border-color: var(--gold);
     }
@@ -86,7 +86,7 @@
       background-color: var(--bg-dark);
     }
 
-    .hero-title {
+    .heroTitle {
       font-size: 3.4rem;
       font-weight: 700;
       color: var(--gold);
@@ -94,17 +94,17 @@
       margin-bottom: 52px;
     }
 
-    .hero-title .white {
+    .heroTitle .white {
       color: var(--text-light);
     }
 
-    .hero-actions {
+    .heroActions {
       display: flex;
       gap: 20px;
       flex-wrap: wrap;
     }
 
-    .btn-hero-gold {
+    .btnHeroGold {
       background: var(--gold);
       border: 2px solid var(--gold);
       color: #fff;
@@ -116,12 +116,12 @@
       cursor: pointer;
       transition: background 0.2s;
     }
-    .btn-hero-gold:hover {
+    .btnHeroGold:hover {
       background: var(--gold);
       border-color: var(--gold);
     }
 
-    .btn-hero-outline {
+    .btnHeroOutline {
       background: transparent;
       border: 2px solid var(--text-light);
       color: var(--text-light);
@@ -133,16 +133,16 @@
       cursor: pointer;
       transition: background 0.2s;
     }
-    .btn-hero-outline:hover {
+    .btnHeroOutline:hover {
       background: rgba(255, 255, 255, 0.07);
     }
 
         /* ── PROFILE ── */
-    .profile-wrapper {
+    .profileWrapper {
       position: relative;
     }
 
-    .profile-icon {
+    .profileIcon {
       width: 48px;
       height: 48px;
       background: #f0ebe0;
@@ -154,11 +154,11 @@
       transition: opacity 0.2s, transform 0.2s;
     }
     
-    .profile-icon:hover {
+    .profileIcon:hover {
       opacity: 0.9;
       transform: scale(1.05);
     }
-    .profile-icon svg {
+    .profileIcon svg {
       width: 28px;
       height: 28px;
       fill: #22180A;

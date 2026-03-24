@@ -5,9 +5,11 @@ import HomeLogin   from './components/Homelogin';
 import Login       from './components/Login';
 import Register    from './components/Register';
 import VerifyPhone from './components/VerifyPhone';
+import VerifyPage from "./components/VerifyPage";
+import SuccessPage from "./components/SuccessPage";
 
 
-export default function App() {
+function App() {
   const [step, setStep] = useState(1);
   const [userData, setUserData] = useState({});
 
@@ -38,7 +40,10 @@ export default function App() {
         } />
         <Route path="/products"   element={<div>Products (ยังไม่ได้สร้าง)</div>} />
         <Route path="/sell"       element={<div>Sell (ยังไม่ได้สร้าง)</div>} />
+        <Route path="/verify" element={<VerifyPage />} />
+        <Route path="/success" element={<SuccessPage />} />
       </Routes>
     </BrowserRouter>
   );
 }
+export default App;
