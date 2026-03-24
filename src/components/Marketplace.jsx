@@ -1,34 +1,40 @@
 import React from "react";
 import "../Marketplace.css";
+import pf from "../assets/pf.png";
+import pdr from "../assets/pdr.png";
+import phone from "../assets/phone.png";
+import crocs from "../assets/crocs.png";
+import duex from "../assets/duex.png"
+import plete from "../assets/plete.png"
 
 const products = [
   {
-    image: "img/phone.png",
+    image: phone,
     title: "iPhone 14 Pro max 512 GB สี Space Black",
     price: "28,500 บาท / ชิ้น",
   },
   {
-    image: "img/duex.png",
+    image: duex,
     title: "เสื้อ Duex Studio สีขาว แขนยาว",
     price: "220 บาท / ชิ้น",
   },
   {
-    image: "img/crocs.png",
+    image: crocs,
     title: "Crocs Classic Clog",
     price: "1,500 บาท / ชิ้น",
   },
   {
-    image: "img/pdr.png",
+    image: pdr,
     title: "Pandora Bracelet Rose Gold",
     price: "1,790 บาท / ชิ้น",
   },
   {
-    image: "img/pf.png",
+    image: pf,
     title: "Dior Perfume Blooming Bouquet",
     price: "4,500 บาท / ชิ้น",
   },
   {
-    image: "img/plete.png",
+    image: plete,
     title: "กระโปรงพลีท นักศึกษา",
     price: "180 บาท / ชิ้น",
   },

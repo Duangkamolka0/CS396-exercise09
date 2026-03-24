@@ -1,18 +1,23 @@
 import React from "react";
 import "../Favproduct.css";
+import pf from "../assets/pf.png";
+import pdr from "../assets/pdr.png";
+import phone from "../assets/phone.png";
+import crocs from "../assets/crocs.png";
+
 
 const productsFavorite = [
   {
     id: 1,
     name: "Dior Perfume Blooming Bouquet",
     price: "4,500 บาท/ชิ้น",
-    img: "/img/pf.png",
+    img: pf,
   },
   {
     id: 2,
     name: "Pandora Bracelet Rose Gold size 17",
     price: "1,790 บาท/ชิ้น",
-    img: "/img/pdr.png",
+    img: pdr,
   },
 ];
 
@@ -21,13 +26,13 @@ const myProducts = [
     id: 3,
     name: "iPhone 14 Pro max 512 GB สี Space Black",
     price: "28,500 บาท/ชิ้น",
-    img: "/img/phone.png",
+    img: phone,
   },
   {
     id: 4,
     name: "Crocs Classic Clog Size M7/W9",
     price: "1,500 บาท/คู่",
-    img: "/img/crocs.png",
+    img: crocs,
   },
 ];
 
