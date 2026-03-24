@@ -1,0 +1,226 @@
+/* Reset */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Sarabun', sans-serif;
+  background: #FFFDF8;
+}
+
+/* ================= HEADER ================= */
+.header {
+  background: #22180A;
+  color: white;
+  padding: 18px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 7px solid #C8892B;
+}
+
+.en-title {
+  font-family: 'Jaro', sans-serif;
+  letter-spacing: 1px;
+}
+
+.header h1 {
+  font-size: 22px;
+  margin: 0;
+}
+
+.back {
+  font-size: 14px;
+  cursor: pointer;
+}
+
+/* ================= CONTAINER ================= */
+.container {
+  max-width: 900px;
+  margin: auto;
+  padding: 40px 20px;
+}
+
+/* ================= TITLE ================= */
+.title {
+  font-size: 26px;
+  margin-bottom: 5px;
+  color: #000;
+}
+
+.subtitle {
+  color: #888;
+  margin-bottom: 30px;
+  font-size: 14px;
+}
+
+/* ================= LAYOUT ================= */
+.row {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.col {
+  flex: 1;
+  min-width: 250px;
+}
+
+/* ================= LABEL ================= */
+.label {
+  margin-bottom: 8px;
+  font-weight: 500;
+  color: #000;
+}
+
+/* ================= UPLOAD BOX ================= */
+.upload-box {
+  border: 2px solid #C8892B;
+  border-radius: 12px;
+  height: 140px;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.upload-box:hover {
+  background: #fff6ee;
+}
+
+.upload-box span {
+  color: #C8892B;
+  font-size: 14px;
+}
+
+/* Icon */
+.icon {
+  width: 30px;
+  height: 30px;
+}
+
+/* Selfie */
+.selfie-section {
+  margin-top: 20px;
+}
+
+.big {
+  height: 160px;
+}
+
+/* ================= CONSENT ================= */
+.consent-title {
+  margin-top: 30px;
+  margin-bottom: 10px;
+  font-weight: bold;
+  color: #000;
+}
+
+.consent-box {
+  border: 2px solid #C8892B;
+  border-radius: 10px;
+  padding: 16px;
+  font-size: 13px;
+  background: #fff;
+  color: #C8892B;
+  line-height: 1.6;
+}
+
+/* ================= CHECKBOX ================= */
+.checkbox {
+  margin-top: 10px;
+  font-size: 13px;
+  color: #000;
+}
+
+/* ================= BUTTONS ================= */
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+
+.btn-outline {
+  padding: 10px 22px;
+  border: 1px solid #aaa;
+  border-radius: 8px;
+  background: white;
+  cursor: pointer;
+}
+
+.btn-primary {
+  padding: 10px 22px;
+  background: #C8892B;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.btn-primary:hover {
+  background: #b06f22;
+}
+
+.btn-primary:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+/* ================= SUCCESS PAGE ================= */
+.success {
+  text-align: center;
+  margin-top: 120px;
+}
+
+/* วงกลม */
+.success-circle {
+  width: 110px;
+  height: 110px;
+  border: 3px solid #C8892B;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  margin-bottom: 25px;
+  background: #fff;
+  animation: pop 0.4s ease;
+}
+
+/* รูปติ๊ก */
+.success-circle img {
+  width: 45px;
+}
+
+/* Title */
+.success-title {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #22180A;
+}
+
+/* Text */
+.success-text {
+  font-size: 14px;
+  color: #777;
+  line-height: 1.6;
+  margin-bottom: 25px;
+}
+
+/* animation */
+@keyframes pop {
+  0% {
+    transform: scale(0.6);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
