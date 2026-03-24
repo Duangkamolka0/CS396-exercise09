@@ -1,0 +1,135 @@
+/* ── LOGIN PAGE ── */
+.login-page {
+  min-height: calc(100vh - 74px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+}
+
+.login-card {
+  display: flex;
+  width: 100%;
+  max-width: 860px;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 12px 48px rgba(0, 0, 0, 0.5);
+}
+
+/* ── LEFT SIDE ── */
+.login-illustration {
+  flex: 1;
+  background: #2a1a00;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 48px;
+  min-height: 460px;
+}
+
+.box-img {
+  width: 220px;
+  height: 220px;
+  object-fit: contain;
+  filter: drop-shadow(0 8px 24px rgba(0,0,0,0.4));
+}
+
+/* ── RIGHT SIDE ── */
+.login-form-side {
+  flex: 1;
+  background: #f0ebe0;
+  padding: 56px 48px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+}
+
+.login-title {
+  font-family: 'Sarabun', sans-serif;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #22180A;
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+/* ── FORM ── */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-group label {
+  font-family: 'Sarabun', sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #22180A;
+}
+
+.form-group input {
+  padding: 12px 16px;
+  border: 2px solid var(--gold);
+  border-radius: 8px;
+  background: #fff;
+  font-family: 'Sarabun', sans-serif;
+  font-size: 0.95rem;
+  color: #22180A;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.form-group input::placeholder {
+  color: #bbb;
+}
+
+.form-group input:focus {
+  border-color: #a06a10;
+  box-shadow: 0 0 0 3px rgba(200, 137, 43, 0.2);
+}
+
+/* ── BUTTON ── */
+.btn-login {
+  margin-top: 8px;
+  width: 100%;
+  padding: 14px;
+  background: var(--gold);
+  border: none;
+  border-radius: 8px;
+  color: #fff;
+  font-family: 'Sarabun', sans-serif;
+  font-size: 1.05rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.1s;
+}
+
+.btn-login:hover {
+  background: #a06a10;
+}
+
+.btn-login:active {
+  transform: scale(0.98);
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 620px) {
+  .login-card {
+    flex-direction: column;
+  }
+
+  .login-illustration {
+    min-height: 200px;
+    padding: 32px;
+  }
+
+  .box-img {
+    width: 140px;
+    height: 140px;
+  }
+
+  .login-form-side {
+    padding: 36px 28px;
+  }
+}
