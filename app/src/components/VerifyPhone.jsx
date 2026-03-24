@@ -7,7 +7,7 @@ export default function VerifyPhone({ onBack, onFinish }) {
   const [otp, setOtp] = useState("");
   const [generatedOtp, setGeneratedOtp] = useState(null);
   const [timer, setTimer] = useState(0);
-
+  const navigate = useNavigate();
   const sendOTP = () => {
     if (!phone) {
       alert("กรุณากรอกเบอร์โทร");
@@ -47,7 +47,9 @@ export default function VerifyPhone({ onBack, onFinish }) {
         </div>
 
         <div className="header-right">
-          <h2 id="home">กลับหน้าหลัก</h2>
+          <h2 id="home" onClick={() => navigate("/")}>
+            กลับหน้าหลัก
+          </h2>
         </div>
     </div>
 

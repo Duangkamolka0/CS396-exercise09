@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from 'react-router-dom';
 import '../styles.css';
+
 export default function Register({ onNext }) {
   const [form, setForm] = useState({
     firstname: "",
@@ -11,6 +12,7 @@ export default function Register({ onNext }) {
     confirmPassword: "",
   });
 
+  const navigate = useNavigate();
   const handleChange = (e) => {
     setForm({
       ...form,
@@ -35,9 +37,11 @@ export default function Register({ onNext }) {
       </div>
 
       <div className="header-right">
-        <h2 id="home">กลับหน้าหลัก</h2>
+        <h2 id="home" onClick={() => navigate("/")}>
+          กลับหน้าหลัก
+        </h2>
+        </div>
       </div>
-    </div>
 
     <div className="container register-form">
     <h2>สร้างบัญชีใหม่</h2>
