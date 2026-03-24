@@ -67,8 +67,8 @@ export default function HomeLogin() {
           สำหรับ<span className={styles.white}>นักศึกษา</span>
         </h1>
         <div className={styles.heroActions}>
-          <button className={styles.btnHeroGold}    onClick={() => navigate('/products')}>เลือกซื้อสินค้า</button>
-          <button className={styles.btnHeroOutline} onClick={() => navigate('/sell')}>ลงขายสินค้า</button>
+          <button className={styles.btnHeroGold}    onClick={() => navigate('/EditProduct')}>เลือกซื้อสินค้า</button>
+          <button className={styles.btnHeroOutline} onClick={() => navigate('/ProductForm')}>ลงขายสินค้า</button>
         </div>
       </section>
     </div>
